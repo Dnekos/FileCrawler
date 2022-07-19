@@ -35,7 +35,7 @@ public class SettingsManager : MonoBehaviour
 	int currX, currY;
 
 #if UNITY_STANDALONE_WIN
-
+	#region Utility functions for Windows
 	[DllImport("user32.dll", EntryPoint = "SetWindowPos")]
 	private static extern bool SetWindowPos(IntPtr hwnd, int hWndInsertAfter, int X, int Y, int cx, int cy, int uFlags);
 
@@ -58,9 +58,17 @@ public class SettingsManager : MonoBehaviour
 	{
 		Process fil = new Process();
 		fil.StartInfo.FileName = path;
-		fil.EnableRaisingEvents = true;
+		fil.EnableRaisingEvents = true; // technically unneeded but good if we want to tie an event to it
 	}
 
+	void CleanFolder(string path)
+	{
+		string destination = primaryFilePath + path.Substring(path.LastIndexOf('\\') + 1);
+		if (File.Exists(destination))
+			File.Delete(path);
+		else
+			File.Move(path, destination);
+	}
 
 	public void OpenFileExplorer(string folder)
 	{
@@ -78,6 +86,9 @@ public class SettingsManager : MonoBehaviour
 		System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
 		return enc.GetBytes(str);
 	}
+	#endregion
+
+	// unused as of now
 	public List<string> ListOfTextWindows()
 	{
 		Process[] processList = Process.GetProcesses().Where<Process>(x=> x.ProcessName.ToLower().Contains("note")).ToArray();
@@ -91,7 +102,7 @@ public class SettingsManager : MonoBehaviour
 		//List<string> equipmentNames = process
 	}
 
-
+	// mostly just a lot of string appending
 	public void CreateWeaponFile(CombatAction action, string drawing, string path = "", bool open = false)
 	{
 		string wepPath = primaryFilePath;
@@ -140,31 +151,33 @@ public class SettingsManager : MonoBehaviour
 			sb.AppendLine(" ]");
 			sb.Append(botbracket);
 
-
-			int drawingLength = drawing.Split('\n')[0].Length;
-			int drawingSideDiff = drawingLength - botbracket.Length;
-			if (drawingSideDiff > 0)
+			if (drawing != "")
 			{
-				sb.Append('-', drawingSideDiff+2);
-				sb.AppendLine("+");
-				System.Text.StringBuilder dr = new System.Text.StringBuilder("| "+drawing);
-				dr.Replace("\n", "| \n| ");
-				sb.Append(dr);
-				sb.AppendLine("|");
-				sb.Append('+');
-				sb.Append('-', drawingLength+1);
-				sb.Append('+');
-			}
-			else
-			{
-				sb.AppendLine();
-				System.Text.StringBuilder dr = new System.Text.StringBuilder("| " + drawing);
-				dr.Replace("\n", "| \n| ");
-				sb.Append(dr);
-				sb.AppendLine("|");
-				sb.Append('+');
-				sb.Append('-', drawingLength + 1);
-				sb.Append('+');
+				int drawingLength = drawing.Split('\n')[0].Length;
+				int drawingSideDiff = drawingLength - botbracket.Length;
+				if (drawingSideDiff > 0)
+				{
+					sb.Append('-', drawingSideDiff + 2);
+					sb.AppendLine("+");
+					System.Text.StringBuilder dr = new System.Text.StringBuilder("| " + drawing);
+					dr.Replace("\n", "| \n| ");
+					sb.Append(dr);
+					sb.AppendLine("|");
+					sb.Append('+');
+					sb.Append('-', drawingLength + 1);
+					sb.Append('+');
+				}
+				else
+				{
+					sb.AppendLine();
+					System.Text.StringBuilder dr = new System.Text.StringBuilder("| " + drawing);
+					dr.Replace("\n", "| \n| ");
+					sb.Append(dr);
+					sb.AppendLine("|");
+					sb.Append('+');
+					sb.Append('-', drawingLength + 1);
+					sb.Append('+');
+				}
 			}
 
 			using (FileStream fs = File.Create(wepPath))
@@ -176,6 +189,8 @@ public class SettingsManager : MonoBehaviour
 		if (open)
 			OpenFile(wepPath);
 	}
+
+
 #endif
 
 	void Start()
@@ -186,40 +201,70 @@ public class SettingsManager : MonoBehaviour
 		CheckAndSet();
 
 #if UNITY_STANDALONE_WIN
+		CleanReadiedActions();
 
 		Directory.CreateDirectory(primaryFilePath);
-		Directory.CreateDirectory(primaryFilePath + "\\Character");
-		Directory.CreateDirectory(primaryFilePath + "\\Character\\Equipped");
+		Directory.CreateDirectory(primaryFilePath + "\\Character"); // unused
+		Directory.CreateDirectory(primaryFilePath + "\\Character\\Equipped"); // unused
 		Directory.CreateDirectory(primaryFilePath + "\\Readied Actions");
 		OpenFileExplorer(primaryFilePath);
-
-
 #endif
 
 	}
-	/*
+
+	private void OnDestroy()
+	{
+		UnityEngine.Debug.Log("destroyed");
+		DeleteAllEnemies();
+	}
+	/* keeping this around as for reference as to the parameters of a 
 	private void ReOpenExplorer(object sender, System.EventArgs e)
 	{
 	}
 	*/
 
+	#region Combat Specific functions
+	public void CreateEnemyDirectory(string name)
+	{
+		string path = primaryFilePath + "\\Enemy - " + name;
+		Directory.CreateDirectory(path);
+		Directory.CreateDirectory(path + "\\Next Attack");
+	}
+	/// <summary>
+	/// return an array of all the file paths of .weapon files in Readied Actions, with the file extension removed
+	/// </summary>
+	/// <returns></returns>
 	public string[] GetReadiedFiles()
 	{
 		string filePath = primaryFilePath +"\\Readied Actions";
 
 		return Directory.GetFiles(filePath).Where(x => x.Contains(".weapon")).Select(x => x.Remove(x.Length-7)).ToArray();
 	}
+
+	/// <summary>
+	/// removes readied action text files from both the player and enemies
+	/// </summary>
 	public void CleanReadiedActions()
 	{
-		foreach (string file in Directory.GetFiles(primaryFilePath + "\\Readied Actions"))
-		{
-			string destination = primaryFilePath + file.Substring(file.LastIndexOf('\\') + 1);
-			if (File.Exists(destination))
-				File.Delete(file);
-			else
-				File.Move(file, destination);
-		}
+		if (Directory.Exists(primaryFilePath + "\\Readied Actions"))
+			foreach (string file in Directory.GetFiles(primaryFilePath + "\\Readied Actions"))
+				CleanFolder(file);
+		foreach (string enemyPath in Directory.GetDirectories(primaryFilePath).Where(x => x.Substring(x.LastIndexOf('\\') + 1).Contains("Enemy")))
+			foreach (string file in Directory.GetFiles(enemyPath))
+				CleanFolder(file);
 	}
+	public void DeleteEnemy(string name)
+	{
+		DirectoryInfo enemy = new DirectoryInfo(primaryFilePath + "Enemy - " + name);
+		enemy.Delete(true);
+	}
+	public void DeleteAllEnemies()
+	{
+		foreach (string enemyPath in Directory.GetDirectories(primaryFilePath).Where(x => x.Substring(x.LastIndexOf('\\') + 1).Contains("Enemy")))
+			new DirectoryInfo(enemyPath).Delete(true);
+	}
+
+	#endregion
 
 	#region Window Setup
 	private void CheckAndSet()

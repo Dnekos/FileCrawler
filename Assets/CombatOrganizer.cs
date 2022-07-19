@@ -21,6 +21,8 @@ public class CombatAction
 		All
 	}
 	public Target targetting;
+	[HideInInspector]
+	public CharacterStats Owner;
 
 	public CombatAction(string name = "", int damage = 0, int energy = 0, int defense = 0, int speed = 0, Target targetting = Target.First)
 	{
@@ -41,11 +43,8 @@ public class CombatOrganizer : MonoBehaviour
 	[SerializeField]
 	int PlayerHealth = 10;
 
-	CharacterStats[] Enemies;
-
 	[SerializeField]
-	List<CombatAction> loadedActions;
-	CombatAction[] ReadiedActions;
+	List<EnemyStats> Enemies;
 
 	[SerializeField, Header("Component")] SettingsManager windowguy;
 	public void BeginCombat()
@@ -53,27 +52,60 @@ public class CombatOrganizer : MonoBehaviour
 		string[] readied = windowguy.GetReadiedFiles();
 		windowguy.CleanReadiedActions();
 
-		ReadiedActions = loadedActions.Where(a => readied.Select(x => x.Substring(x.LastIndexOf('\\') + 1)).Contains(a.name)).ToArray();//.OrderBy(x=>x.speed).ToArray();
-		Debug.Log(ReadiedActions.Length);
-		foreach(CombatAction action in ReadiedActions)
+		List<CombatAction> ReadiedActions = Player.loadedActions.Where(a => readied.Select(x => x.Substring(x.LastIndexOf('\\') + 1)).Contains(a.name)).ToList();
+
+		for (int i = 0; i < Enemies.Count; i++)
+		{
+			ReadiedActions.AddRange(Enemies[i].preppedActions);
+			Enemies[i].PrepareAttack(windowguy);
+		}
+		
+		foreach(CombatAction action in ReadiedActions.OrderBy(x => x.speed))
 		{
 			PerformAction(action);
-			Debug.Log(action.name) ;
+			Debug.Log(action.name);
 		}
+
 	}
 
 	void PerformAction(CombatAction action)
 	{
 		Energy = Mathf.Max(0, Energy - action.energy);
 		if (Energy >= 0)
-			PlayerHealth -= action.damage;
+		{
+			if (action.targetting == CombatAction.Target.Self)
+				action.Owner.ReceiveBasicAction(action);
+			else if (action.Owner == Player)
+				PlayerTargeting(action);
+			else
+				Player.ReceiveBasicAction(action);
+
+		}
+	}
+	void PlayerTargeting(CombatAction action)
+	{
+		switch (action.targetting)
+		{
+			case CombatAction.Target.All:
+				for (int i = 0; i < Enemies.Count; i++)
+					Enemies[i].ReceiveBasicAction(action);
+				break;
+			case CombatAction.Target.First:
+				Enemies[0].ReceiveBasicAction(action);
+				break;
+			case CombatAction.Target.Last:
+				Enemies[Enemies.Count - 1].ReceiveBasicAction(action);
+				break;
+			case CombatAction.Target.Random:
+				Enemies[Random.Range(0,Enemies.Count)].ReceiveBasicAction(action);
+				break;
+		}
 	}
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
 		Player = new CharacterStats("Player", 10, 10);
-		loadedActions = new List<CombatAction>();
 		CreateStarterEquipment();
 
 		InitiateEncounter();
@@ -97,8 +129,8 @@ public class CombatOrganizer : MonoBehaviour
 					  + "      \\ | | /      \n"
 					  + "       \\| |/       \n"
 					  + "        \\_/        ";
-		loadedActions.Add(new CombatAction(name: "Shield", energy: 3, defense: 4, speed: 5, targetting: CombatAction.Target.Self));
-		windowguy.CreateWeaponFile(loadedActions[0], shield, "", false);
+		Player.AddAction(new CombatAction(name: "Shield", energy: 3, defense: 4, speed: 5, targetting: CombatAction.Target.Self));
+		windowguy.CreateWeaponFile(Player.loadedActions[0], shield, "", false);
 
 		string body = "            _                                                 \n"
 					+ " _         | |                                                \n"
@@ -106,15 +138,21 @@ public class CombatOrganizer : MonoBehaviour
 					+ "| -)_______|==[] ============================================>\n"
 					+ "|_|        | | ---------------------------------------------/ \n"
 					+ "           |_|                                                ";
-		loadedActions.Add(new CombatAction(name: "Sword", damage: 3, energy: 6, targetting: CombatAction.Target.First));
-		windowguy.CreateWeaponFile(loadedActions[1], body, "", false);
+		Player.AddAction(new CombatAction(name: "Sword", damage: 3, energy: 6, targetting: CombatAction.Target.First));
+		windowguy.CreateWeaponFile(Player.loadedActions[1], body, "", false);
 	}
 	void InitiateEncounter()
 	{
+		Enemies = new List<EnemyStats>();
 		CreateEnemy();
+
 	}
 	void CreateEnemy()
 	{
-		Enemies = new CharacterStats[] { new CharacterStats("Goblin", 5, 5, 2) };
+		EnemyStats enemy = new EnemyStats("Goblin", 5, 5, 2,1);
+		enemy.AddAction(new CombatAction("Shoddy Spear", 2, 3, 0, 1));
+		windowguy.CreateEnemyDirectory(enemy.Name);
+		enemy.PrepareAttack(windowguy);
+		Enemies.Add(enemy);
 	}
 }

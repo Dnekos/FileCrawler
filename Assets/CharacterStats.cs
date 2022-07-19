@@ -9,6 +9,9 @@ public class CharacterStats
 	public int Energy;
 	public int Defense;
 
+	[SerializeField]
+	public List<CombatAction> loadedActions;
+
 
 	public CharacterStats(string name, int health, int energy, int defense = 0)
 	{
@@ -16,6 +19,19 @@ public class CharacterStats
 		Health = health;
 		Energy = energy;
 		Defense = defense;
+		loadedActions = new List<CombatAction>();
+	}
+
+	public void AddAction(CombatAction action)
+	{
+		action.Owner = this;
+		loadedActions.Add(action);
+	}
+
+	public void ReceiveBasicAction(CombatAction action)
+	{
+		ReceiveShield(action.defense);
+		TakeDamage(action.damage);
 	}
 
 	public void TakeDamage(int dam)
