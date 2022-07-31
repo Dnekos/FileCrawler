@@ -1,0 +1,1584 @@
+fileFormatVersion: 2
+guid: bf40897ae97fac34186341a59ced4edd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5782670296243152966
+    second: daggerfall_skeleton_0
+  - first:
+      213: -8075973771823567129
+    second: daggerfall_skeleton_1
+  - first:
+      213: -8591344140341000656
+    second: daggerfall_skeleton_2
+  - first:
+      213: 2532579892308451051
+    second: daggerfall_skeleton_3
+  - first:
+      213: -4699262600072777764
+    second: daggerfall_skeleton_4
+  - first:
+      213: -6033184134605688810
+    second: daggerfall_skeleton_5
+  - first:
+      213: 8478670767555116057
+    second: daggerfall_skeleton_6
+  - first:
+      213: -333499401400846493
+    second: daggerfall_skeleton_7
+  - first:
+      213: 3319531584181947936
+    second: daggerfall_skeleton_8
+  - first:
+      213: 2445646802909347140
+    second: daggerfall_skeleton_9
+  - first:
+      213: 3816116171080047199
+    second: daggerfall_skeleton_10
+  - first:
+      213: 3350998750285268921
+    second: daggerfall_skeleton_11
+  - first:
+      213: 92796810268320556
+    second: daggerfall_skeleton_12
+  - first:
+      213: -808712069003458697
+    second: daggerfall_skeleton_13
+  - first:
+      213: 5739961416993522635
+    second: daggerfall_skeleton_14
+  - first:
+      213: 130815318112833542
+    second: daggerfall_skeleton_15
+  - first:
+      213: 3556247936577363853
+    second: daggerfall_skeleton_16
+  - first:
+      213: -7863834102041635306
+    second: daggerfall_skeleton_17
+  - first:
+      213: 7798673607598475031
+    second: daggerfall_skeleton_18
+  - first:
+      213: 7153064523485959045
+    second: daggerfall_skeleton_19
+  - first:
+      213: -8720384572448040082
+    second: daggerfall_skeleton_20
+  - first:
+      213: 5808083910482360602
+    second: daggerfall_skeleton_21
+  - first:
+      213: 2603392117743656449
+    second: daggerfall_skeleton_23
+  - first:
+      213: -5963571896204546018
+    second: daggerfall_skeleton_24
+  - first:
+      213: 8283396447811153958
+    second: daggerfall_skeleton_26
+  - first:
+      213: -1751713498117165346
+    second: daggerfall_skeleton_28
+  - first:
+      213: -482288246751802732
+    second: daggerfall_skeleton_30
+  - first:
+      213: -5463937972218069205
+    second: daggerfall_skeleton_31
+  - first:
+      213: -1614964403308374973
+    second: daggerfall_skeleton_32
+  - first:
+      213: 1200472504362523079
+    second: daggerfall_skeleton_33
+  - first:
+      213: 7379350187515212391
+    second: daggerfall_skeleton_34
+  - first:
+      213: 3805451301307970413
+    second: daggerfall_skeleton_35
+  - first:
+      213: -767865489711476289
+    second: daggerfall_skeleton_36
+  - first:
+      213: 1667855806342562672
+    second: daggerfall_skeleton_37
+  - first:
+      213: -8805575315297128940
+    second: daggerfall_skeleton_38
+  - first:
+      213: 6914614324759492126
+    second: daggerfall_skeleton_39
+  - first:
+      213: 6780678641598233655
+    second: daggerfall_skeleton_40
+  - first:
+      213: -4218159590506328566
+    second: daggerfall_skeleton_41
+  - first:
+      213: -4922512608657517474
+    second: daggerfall_skeleton_42
+  - first:
+      213: 2429850441058282456
+    second: daggerfall_skeleton_43
+  - first:
+      213: -4919508566387739194
+    second: daggerfall_skeleton_44
+  - first:
+      213: 5482417448662796928
+    second: daggerfall_skeleton_45
+  - first:
+      213: -7406457637353244149
+    second: daggerfall_skeleton_46
+  - first:
+      213: -6334688962003762683
+    second: daggerfall_skeleton_47
+  - first:
+      213: 1069676081145995256
+    second: daggerfall_skeleton_48
+  - first:
+      213: 1698263336140481840
+    second: daggerfall_skeleton_49
+  - first:
+      213: -6258277939171384013
+    second: daggerfall_skeleton_50
+  - first:
+      213: -4453238711318315146
+    second: daggerfall_skeleton_51
+  - first:
+      213: -5039133472020305563
+    second: daggerfall_skeleton_52
+  - first:
+      213: -6877672584865378206
+    second: daggerfall_skeleton_53
+  - first:
+      213: 5462303524476682421
+    second: daggerfall_skeleton_54
+  - first:
+      213: 2906973486726008595
+    second: daggerfall_skeleton_55
+  - first:
+      213: -564859561077008173
+    second: daggerfall_skeleton_56
+  - first:
+      213: 6624255279979552415
+    second: daggerfall_skeleton_57
+  - first:
+      213: -3046364532582262670
+    second: daggerfall_skeleton_58
+  - first:
+      213: -757610087911241422
+    second: daggerfall_skeleton_59
+  - first:
+      213: -3859165260327327055
+    second: daggerfall_skeleton_60
+  - first:
+      213: 7548082995223320089
+    second: daggerfall_skeleton_61
+  - first:
+      213: -9209362795144707476
+    second: daggerfall_skeleton_62
+  - first:
+      213: -292254926458978999
+    second: daggerfall_skeleton_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: daggerfall_skeleton_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1114
+        width: 80
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75933e004dfbfa0800000000000000
+      internalID: -5782670296243152966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1117
+        width: 82
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eea51394a06cef80800000000000000
+      internalID: -8075973771823567129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1114
+        width: 80
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03647d3f50a65c880800000000000000
+      internalID: -8591344140341000656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_3
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1115
+        width: 77
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee975e6ef7852320800000000000000
+      internalID: 2532579892308451051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 986
+        width: 101
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf2260209dd8ceb0800000000000000
+      internalID: -4699262600072777764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 988
+        width: 100
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6103e48aef2d54ca0800000000000000
+      internalID: -6033184134605688810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 985
+        width: 100
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c7c93242a4aa570800000000000000
+      internalID: 8478670767555116057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_7
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 987
+        width: 98
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36772b6bf0c2f5bf0800000000000000
+      internalID: -333499401400846493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_8
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 986
+        width: 81
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ecadf5368511e20800000000000000
+      internalID: 3319531584181947936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_9
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 986
+        width: 90
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d3b754fcea0f120800000000000000
+      internalID: 2445646802909347140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 985
+        width: 82
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a99de507195f430800000000000000
+      internalID: 3816116171080047199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_11
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 985
+        width: 98
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b70889eb93218e20800000000000000
+      internalID: 3350998750285268921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 856
+        width: 62
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c232550153ea94100800000000000000
+      internalID: 92796810268320556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_13
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 856
+        width: 66
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7774a7178a0e6c4f0800000000000000
+      internalID: -808712069003458697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_14
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 855
+        width: 61
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3c8544f7078af40800000000000000
+      internalID: 5739961416993522635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 855
+        width: 63
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6009b47b6dfb0d100800000000000000
+      internalID: 130815318112833542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_16
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 856
+        width: 82
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd8e018a45a5130800000000000000
+      internalID: 3556247936577363853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_17
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 855
+        width: 82
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616943f6c8c0ed290800000000000000
+      internalID: -7863834102041635306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_18
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 856
+        width: 81
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7170f14b3547a3c60800000000000000
+      internalID: 7798673607598475031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_19
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 855
+        width: 79
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58354d9194ac44360800000000000000
+      internalID: 7153064523485959045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_20
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 660
+        width: 100
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b10761f68faf680800000000000000
+      internalID: -8720384572448040082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_21
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 660
+        width: 96
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1976f54b857a9050800000000000000
+      internalID: 5808083910482360602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_23
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 659
+        width: 90
+        height: 164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e9925765b112420800000000000000
+      internalID: 2603392117743656449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_24
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 660
+        width: 81
+        height: 179
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10b93ee4f22d3da0800000000000000
+      internalID: -5963571896204546018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_26
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 659
+        width: 82
+        height: 176
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62034859e2984f270800000000000000
+      internalID: 8283396447811153958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_28
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 659
+        width: 86
+        height: 177
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede287cbad9a0b7e0800000000000000
+      internalID: -1751713498117165346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_30
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 491
+        width: 84
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a430515619e49f0800000000000000
+      internalID: -482288246751802732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_31
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 492
+        width: 63
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f7c2b0d513c24b0800000000000000
+      internalID: -5463937972218069205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_32
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 491
+        width: 78
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34457ef7e6e7699e0800000000000000
+      internalID: -1614964403308374973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_33
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 491
+        width: 94
+        height: 138
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9d621e16fe8a010800000000000000
+      internalID: 1200472504362523079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_34
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 491
+        width: 114
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7627e08e5e7b86660800000000000000
+      internalID: 7379350187515212391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_35
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 491
+        width: 108
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d637280ebcdafc430800000000000000
+      internalID: 3805451301307970413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_36
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 492
+        width: 60
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1577ac76ef755f0800000000000000
+      internalID: -767865489711476289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_37
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 324
+        width: 62
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0730f99e40a652710800000000000000
+      internalID: 1667855806342562672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_38
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 323
+        width: 60
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e24c897ef4cc580800000000000000
+      internalID: -8805575315297128940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_39
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 323
+        width: 80
+        height: 135
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16fd1ad715a5ff50800000000000000
+      internalID: 6914614324759492126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_40
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 323
+        width: 102
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c7a888c4fc91e50800000000000000
+      internalID: 6780678641598233655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_41
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 323
+        width: 92
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e86f183361675c0800000000000000
+      internalID: -4218159590506328566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 159
+        width: 62
+        height: 139
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54569eecd8bfabb0800000000000000
+      internalID: -4922512608657517474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_43
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 158
+        width: 59
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbea9c2a1098b120800000000000000
+      internalID: 2429850441058282456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_44
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 158
+        width: 56
+        height: 131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5b7f606056abbb0800000000000000
+      internalID: -4919508566387739194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_45
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 158
+        width: 63
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a03f95f95751c40800000000000000
+      internalID: 5482417448662796928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_46
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 158
+        width: 64
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ab499150af63990800000000000000
+      internalID: -7406457637353244149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_47
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 158
+        width: 51
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5028d21a3f9a618a0800000000000000
+      internalID: -6334688962003762683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_48
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 199
+        width: 59
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff50797ab048de00800000000000000
+      internalID: 1069676081145995256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_49
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 199
+        width: 63
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03529b5a181719710800000000000000
+      internalID: 1698263336140481840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_50
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 199
+        width: 63
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335a6024f512629a0800000000000000
+      internalID: -6258277939171384013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_51
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 198
+        width: 56
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f7adf7cfae232c0800000000000000
+      internalID: -4453238711318315146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_52
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 198
+        width: 43
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569e2704ec6611ab0800000000000000
+      internalID: -5039133472020305563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_53
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 198
+        width: 44
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26018a939399d80a0800000000000000
+      internalID: -6877672584865378206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_54
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 16
+        width: 100
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b00ccf6d100ecb40800000000000000
+      internalID: 5462303524476682421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_55
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 17
+        width: 89
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f48cffbf4a75820800000000000000
+      internalID: 2906973486726008595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_56
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 18
+        width: 85
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d89502d8373928f0800000000000000
+      internalID: -564859561077008173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_57
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 18
+        width: 93
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9edfa094151eeb50800000000000000
+      internalID: 6624255279979552415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_58
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 18
+        width: 96
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278d513199329b5d0800000000000000
+      internalID: -3046364532582262670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_59
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 26
+        width: 74
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2394cc793ad6c75f0800000000000000
+      internalID: -757610087911241422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_60
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 28
+        width: 76
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba69a874ad717ac0800000000000000
+      internalID: -3859165260327327055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_61
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 28
+        width: 66
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d3712e7d20c860800000000000000
+      internalID: 7548082995223320089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_62
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 30
+        width: 49
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6283b3c455c13080800000000000000
+      internalID: -9209362795144707476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daggerfall_skeleton_63
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 31
+        width: 70
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dfd8c51b3b1fbf0800000000000000
+      internalID: -292254926458978999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: da6e6044b11000c4e88b498b7e67033f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

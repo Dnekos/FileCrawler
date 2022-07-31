@@ -39,9 +39,8 @@ public class CombatOrganizer : MonoBehaviour
 {
 	[SerializeField, Header("Stats")]
 	CharacterStats Player;
+	Movement PlayerMovement;
 	int Energy = 10;
-	[SerializeField]
-	int PlayerHealth = 10;
 
 	[SerializeField]
 	List<EnemyStats> Enemies;
@@ -57,47 +56,81 @@ public class CombatOrganizer : MonoBehaviour
 		for (int i = 0; i < Enemies.Count; i++)
 		{
 			ReadiedActions.AddRange(Enemies[i].preppedActions);
-			Enemies[i].PrepareAttack(windowguy);
-		}
-		
-		foreach(CombatAction action in ReadiedActions.OrderBy(x => x.speed))
-		{
-			PerformAction(action);
-			Debug.Log(action.name);
+			Enemies[i].PrepareAttack();
 		}
 
+		StartCoroutine(ActionStuff(ReadiedActions));
 	}
 
-	void PerformAction(CombatAction action)
+	IEnumerator ActionStuff(List<CombatAction> readiedActions)
 	{
-		Energy = Mathf.Max(0, Energy - action.energy);
-		if (Energy >= 0)
+		// run through actions and give time for animations
+		foreach (CombatAction action in readiedActions.OrderByDescending(x => x.speed))
 		{
-			if (action.targetting == CombatAction.Target.Self)
-				action.Owner.ReceiveBasicAction(action);
-			else if (action.Owner == Player)
-				PlayerTargeting(action);
-			else
-				Player.ReceiveBasicAction(action);
-
+			AttemptAction(action);
+			Debug.Log(action.name);
+			yield return new WaitForSeconds(1);
 		}
+
+		// Sweep for dead enemies
+		for (int i = Enemies.Count - 1; i >= 0; i--)
+		{
+			if (Enemies[i] == null)
+				Enemies.RemoveAt(i);
+		}
+
+		// end or continue combat
+		if (Enemies.Count == 0)
+			PlayerMovement.EndCombat();
+		else
+			windowguy.FocusExplorer();
 	}
+	void AttemptAction(CombatAction action)
+	{
+		if (action.Owner != null)
+		{
+			action.Owner.Energy = Mathf.Max(0, Energy - action.energy);
+			if (action.Owner.Energy >= 0)
+			{
+				action.Owner.PerformAction(action);
+
+				if (action.targetting == CombatAction.Target.Self)
+					PerformAction(action.Owner, action);
+				else if (action.Owner == Player)
+					PlayerTargeting(action);
+				else
+					PerformAction(Player, action);
+			}
+			else
+				Debug.Log("Not enough energy");
+		}
+		else
+			Debug.Log("ya dead");
+	}
+	void PerformAction(CharacterStats target, CombatAction action)
+	{
+		if (target != null)
+			target.ReceiveBasicAction(action);
+		else
+			Debug.Log("action failed");
+	}
+
 	void PlayerTargeting(CombatAction action)
 	{
 		switch (action.targetting)
 		{
 			case CombatAction.Target.All:
-				for (int i = 0; i < Enemies.Count; i++)
-					Enemies[i].ReceiveBasicAction(action);
+				for (int i = Enemies.Count - 1; i >= 0; i--)
+					PerformAction(Enemies[i], action);
 				break;
 			case CombatAction.Target.First:
-				Enemies[0].ReceiveBasicAction(action);
+				PerformAction(Enemies[0], action);
 				break;
 			case CombatAction.Target.Last:
-				Enemies[Enemies.Count - 1].ReceiveBasicAction(action);
+				PerformAction(Enemies[Enemies.Count - 1], action);
 				break;
 			case CombatAction.Target.Random:
-				Enemies[Random.Range(0,Enemies.Count)].ReceiveBasicAction(action);
+				PerformAction(Enemies[Random.Range(0, Enemies.Count)], action);
 				break;
 		}
 	}
@@ -105,10 +138,11 @@ public class CombatOrganizer : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		Player = new CharacterStats("Player", 10, 10);
+		PlayerMovement = FindObjectOfType<Movement>();
+		//Player = new CharacterStats("Player", 10, 10);
 		CreateStarterEquipment();
 
-		InitiateEncounter();
+		//InitiateEncounter();
 	}
 
 	void CreateStarterEquipment()
@@ -130,7 +164,7 @@ public class CombatOrganizer : MonoBehaviour
 					  + "       \\| |/       \n"
 					  + "        \\_/        ";
 		Player.AddAction(new CombatAction(name: "Shield", energy: 3, defense: 4, speed: 5, targetting: CombatAction.Target.Self));
-		windowguy.CreateWeaponFile(Player.loadedActions[0], shield, "", false);
+		SettingsManager.CreateWeaponFile(Player.loadedActions[0], shield, "", false);
 
 		string body = "            _                                                 \n"
 					+ " _         | |                                                \n"
@@ -139,20 +173,35 @@ public class CombatOrganizer : MonoBehaviour
 					+ "|_|        | | ---------------------------------------------/ \n"
 					+ "           |_|                                                ";
 		Player.AddAction(new CombatAction(name: "Sword", damage: 3, energy: 6, targetting: CombatAction.Target.First));
-		windowguy.CreateWeaponFile(Player.loadedActions[1], body, "", false);
+		SettingsManager.CreateWeaponFile(Player.loadedActions[1], body, "", false);
 	}
-	void InitiateEncounter()
-	{
-		Enemies = new List<EnemyStats>();
-		CreateEnemy();
 
+	public bool StartAFight(EnemyStats[] presentEnemies)
+	{
+		if (presentEnemies.Length == 0)
+			return false;
+		Enemies.AddRange(presentEnemies);
+		foreach (EnemyStats enemy in Enemies)
+		{
+			windowguy.CreateEnemyDirectory(enemy.Name);
+			enemy.PrepareAttack();
+
+		}
+		return true;
+	}
+
+	void AddEnemy()
+	{
+		Enemies[0].AddAction(new CombatAction("Shoddy Spear", 2, 3, 0, 1));
+		windowguy.CreateEnemyDirectory(Enemies[0].Name);
+		Enemies[0].PrepareAttack();
 	}
 	void CreateEnemy()
 	{
 		EnemyStats enemy = new EnemyStats("Goblin", 5, 5, 2,1);
 		enemy.AddAction(new CombatAction("Shoddy Spear", 2, 3, 0, 1));
 		windowguy.CreateEnemyDirectory(enemy.Name);
-		enemy.PrepareAttack(windowguy);
+		enemy.PrepareAttack();
 		Enemies.Add(enemy);
 	}
 }

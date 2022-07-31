@@ -23,7 +23,7 @@ public class SettingsManager : MonoBehaviour
 	[SerializeField]
 	TextMeshProUGUI text;
 
-	string primaryFilePath;
+	static string primaryFilePath;
 	Process fExplorerProcess;
 
 	public bool fullScreen = false;
@@ -44,6 +44,9 @@ public class SettingsManager : MonoBehaviour
 
 	[DllImport("user32.dll", CharSet = CharSet.Auto)]
 	static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+	[DllImport("user32.dll")]
+	internal static extern IntPtr SetForegroundWindow(IntPtr hWnd);
 
 	const UInt32 WM_CLOSE = 0x0010;
 
@@ -70,8 +73,13 @@ public class SettingsManager : MonoBehaviour
 			File.Move(path, destination);
 	}
 
-	public void OpenFileExplorer(string folder)
+	public void OpenFileExplorer(string folder, bool RedirectIfOpen = false)
 	{
+		foreach (Process p in Process.GetProcessesByName("explorer"))
+		{
+			p.CloseMainWindow();
+		}
+
 		fExplorerProcess = new Process();
 
 		fExplorerProcess.StartInfo.FileName = "explorer.exe";
@@ -81,10 +89,15 @@ public class SettingsManager : MonoBehaviour
 		fExplorerProcess.Start();
 	}
 
-	private byte[] StringToByteArray(string str)
+	private static byte[] StringToByteArray(string str)
 	{
 		System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
 		return enc.GetBytes(str);
+	}
+
+	public void FocusExplorer()
+	{
+		SetForegroundWindow(fExplorerProcess.MainWindowHandle); //set to topmost
 	}
 	#endregion
 
@@ -103,7 +116,7 @@ public class SettingsManager : MonoBehaviour
 	}
 
 	// mostly just a lot of string appending
-	public void CreateWeaponFile(CombatAction action, string drawing, string path = "", bool open = false)
+	public static void CreateWeaponFile(CombatAction action, string drawing, string path = "", bool open = false)
 	{
 		string wepPath = primaryFilePath;
 		if (path != "")
@@ -190,6 +203,15 @@ public class SettingsManager : MonoBehaviour
 			OpenFile(wepPath);
 	}
 
+	public static void CreateDirectory(string name)
+	{
+		Directory.CreateDirectory(primaryFilePath + name);
+	}
+	public static void DeleteDirectory(string name)
+	{
+		if (Directory.Exists(primaryFilePath + name))
+			Directory.Delete(primaryFilePath + name, true);
+	}
 
 #endif
 
@@ -207,7 +229,7 @@ public class SettingsManager : MonoBehaviour
 		Directory.CreateDirectory(primaryFilePath + "\\Character"); // unused
 		Directory.CreateDirectory(primaryFilePath + "\\Character\\Equipped"); // unused
 		Directory.CreateDirectory(primaryFilePath + "\\Readied Actions");
-		OpenFileExplorer(primaryFilePath);
+		OpenFileExplorer(primaryFilePath,true);
 #endif
 
 	}
@@ -253,7 +275,7 @@ public class SettingsManager : MonoBehaviour
 			foreach (string file in Directory.GetFiles(enemyPath))
 				CleanFolder(file);
 	}
-	public void DeleteEnemy(string name)
+	public static void DeleteEnemy(string name)
 	{
 		DirectoryInfo enemy = new DirectoryInfo(primaryFilePath + "Enemy - " + name);
 		enemy.Delete(true);
